@@ -1,3 +1,11 @@
-body{
+.avatar{
+	width: 100%;
+	border-color: green;
 	
+}
+.avatar:hover{
+	box-shadow: 2px 2px 4px green;
+}
+.shadow:hover{
+	box-shadow: 2px 2px 6px blue;
 }
