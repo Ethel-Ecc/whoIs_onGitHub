@@ -1,38 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title> Git-Profile Search Tool</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find GitHub Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custom.css">
 
-    <!-- Bootstrap core CSS -->
-   <link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css>
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <nav class="navbar navbar-inverse">
-      <a class="navbar-brand" href="#">Git Profiling Tool</a>
+</head>
+<body>
+    <nav class="navbar navbar-light fixed-top" style="background-color: rebeccapurple;">
+        <a class="navbar-brand" href="#" style="color: navajowhite" >
+            <img src="logo.ico" width="60" height="30" class="d-inline-block align-top"> GitHub User-Profile Tool
+        </a>
     </nav>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center row">
+            <div class="card border-info mb-3 col-md-9">
+                <div class="card-body mt-0">
+                    <hr color="blue">
+                    <h4 class="card-title">Description</h4>
+                    <hr color="blue">
+                    <p class="card-text">This tool utilizes the GitHub API to find valid GitHub users based on your
+                        search queries. UX theme and functionalities are provided by bootstrap v4.0.0 and
+                        jQuery-3.2.1 libraries.<br>
+                        The app executes an AJAX request to the API based on your entries to retrieve the first valid
+                        query that match your input. However, for a valid username on GitHub, the app will return the
+                        user profile, avatar, repos, gists and other parameters.  When there is no match, nothing is
+                        displayed.<br> <span style="font-weight: bold">No frameworks. Just plain Javascript.</span>
+                    </p>
+                    <hr color="blue">
+                    <br>
+                    <p class="paraStyle mb-0">Find a Git user-profile & repos </p>
+                    <div class="input-group input-group-lg mt-0">
+                        <input type="text" class="form-control" id="userInput" placeholder="Search here..."
+                               aria-label="userInput" autofocus="autofocus">
+                    </div>
+                    <div id="displayResult" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="jquery-3.2.1.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
 
-    <div class="container">
-
-      <div class="searchContainer">
-        <h1>Find Git Profiles</h1>
-        <p class="lead">Enter a name or query data to get the profile</p>
-        <input type="text" id="searchUser" class="form-control", placeholder="Enter a search data here" autofocus='true'>
-      </div>
-
-      <div id="profile" class="m-3"></div>
-
-    </div><!-- /.container -->
-
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src= "js/main.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
